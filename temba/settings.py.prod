@@ -236,3 +236,6 @@ ELASTIC_APM = {
 # Crontab Settings ..
 # -----------------------------------------------------------------------------------
 CELERYBEAT_SCHEDULE["retry-errored-messages"] = {"task": "retry_errored_messages", "schedule": crontab(hour=1, minute=0)}
+
+
+SESSION_COOKIE_SECURE = True
