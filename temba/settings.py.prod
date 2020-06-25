@@ -156,7 +156,10 @@ AWS_BUCKET_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
 STORAGE_URL = f"https://{AWS_BUCKET_DOMAIN}"
 
 DEFAULT_FILE_STORAGE = env("DEFAULT_FILE_STORAGE",
-                           default="storages.backends.s3boto3.S3Boto3Storage")
+                           default="temba.storage_backends.CustomS3Boto3Storage")
+
+S3_NETWORK_TIMEOUT = env.int("S3_NETWORK_TIMEOUT", 120)
+S3_NETWORK_RETRY_COUNT = env.int("S3_NETWORK_RETRY_COUNT", 5)
 
 # CELERY
 # ------------------------------------------------------------------------------
