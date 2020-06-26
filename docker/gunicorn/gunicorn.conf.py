@@ -8,4 +8,3 @@ accesslog = 'gunicorn.access'
 errorlog = 'gunicorn.error'
 capture_output = True
 timeout = 120
-forwarded-allow-ips = '*'
