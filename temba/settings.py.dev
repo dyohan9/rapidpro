@@ -98,3 +98,8 @@ warnings.filterwarnings(
 # Make our sitestatic URL be our static URL on development
 # -----------------------------------------------------------------------------------
 STATIC_URL = "/sitestatic/"
+
+
+SESSION_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER=("HTTP_X_FORWARDED_HTTPS", "https")
+SECURE_SSL_REDIRECT = True
